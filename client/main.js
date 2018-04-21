@@ -1,6 +1,6 @@
 import { Template } from 'meteor/templating';
 import { ReactiveVar } from 'meteor/reactive-var';
-
+import '/imports/startup/client';
 import './main.html';
 
 Template.hello.onCreated(function helloOnCreated() {
@@ -31,6 +31,14 @@ Template.login.events({
             if(err){
                 console.log('Handle errors here: ', err);
             }
+        });
+    },
+    "click .log-out": function(e){
+        e.preventDefault();
+        console.log('logOUTTT!!');
+
+        Meteor.logout(function(err){
+            console.log('Handle errors here: ', err);
         });
     }
 });

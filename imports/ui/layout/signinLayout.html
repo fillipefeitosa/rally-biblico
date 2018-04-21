@@ -1,0 +1,10 @@
+<template name="signinLayout">
+
+    {{#if currentUser}}
+        Now you're logged in as <strong>{{currentUser.username}}</strong> using {{getEmail}}
+        <p> Aqui o user: {{currentUser}} </p>
+    {{else}}
+        {{> atForm}}
+    {{/if}}
+
+</template>

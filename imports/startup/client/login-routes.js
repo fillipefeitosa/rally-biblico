@@ -1,6 +1,5 @@
-import '../../ui/layout/signin-layout.html'
 import '../../ui/layout/main.html'
-
+import '../../ui/layout/signinLayout.html'
 
 var PostLogout = function(){
     Router.go('/');
@@ -8,12 +7,12 @@ var PostLogout = function(){
 
 Router.onBeforeAction(function(){
     if (! Meteor.userId()) {
-        this.render('signinLayout');
+        this.render('signin-layout');
     } else {
         this.next();
     }
 });
 
-Router.route('/', function(){
-    this.render('Main');
-})
+Router.route('/', {
+    template: 'main'
+});;
