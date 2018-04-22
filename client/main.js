@@ -1,7 +1,6 @@
 import { Template } from 'meteor/templating';
 import { ReactiveVar } from 'meteor/reactive-var';
-import '/imports/startup/client';
-import './main.html';
+import '../imports/startup/client';
 
 
 Template.login.events({
