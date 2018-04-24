@@ -5,8 +5,9 @@
     "start": "export MONGO_URL=mongodb://rally:biblico@ds249128.mlab.com:49128/rallybiblico | meteor run"
   },
   "dependencies": {
+    "@babel/runtime": "^7.0.0-beta.46",
     "babel-runtime": "6.18.0",
-    "bcrypt": "^2.0.0",
+    "bcrypt": "^2.0.1",
     "meteor-node-stubs": "~0.2.0"
   }
 }

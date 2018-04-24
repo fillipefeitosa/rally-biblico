@@ -2,17 +2,25 @@
     <head>
       <title>Rally Bíblico</title>
     </head>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <span class="align-middle">Rally Bíblico</span>
-            </div>
-        </div>
-    </div>
+    {{> navbar}}
 
     {{#unless currentUser}}
         {{> signin}}
     {{else}}
         {{> piloto}}
     {{/unless}}
+</template>
+
+<template name="navbar">
+    <div id='cssmenu' class="align-center">
+        <ul>
+            <li class='active'><a href='#'>Rally Bíblico</a></li>
+            <li><a href='#'>Piloto</a></li>
+            <li><a href='#'>Coordenador</a></li>
+            <li><a href='#'>Administrador</a></li>
+            {{#if currentUser}}
+                <li><a href="#" onclick=AccountsTemplates.logout()>Sair</a></li>
+            {{/if}}
+        </ul>
+    </div>
 </template>
