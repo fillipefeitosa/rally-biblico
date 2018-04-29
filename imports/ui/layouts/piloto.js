@@ -24,7 +24,7 @@ Template.dadospessoais.events({
         const city = $(event.target).val();
         Meteor.users.update({_id: Meteor.userId()}, {$set: {"profile.city": city}});
     },
-    'change [name=UF]': function(event){
+    'change [name=uf]': function(event){
         const uf = $(event.target).val();
         Meteor.users.update({_id: Meteor.userId()}, {$set: {"profile.uf": uf}});
     }
