@@ -2,7 +2,7 @@
   "name": "rallybiblico",
   "private": true,
   "scripts": {
-    "start": "export MONGO_URL=mongodb://rally:biblico@ds249128.mlab.com:49128/rallybiblico | meteor run"
+    "start": "meteor run"
   },
   "dependencies": {
     "@babel/runtime": "^7.0.0-beta.46",

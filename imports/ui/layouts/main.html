@@ -7,15 +7,15 @@
     {{#unless currentUser}}
         {{> signin}}
     {{else}}
-        {{> piloto}}
+        {{> yield}}
     {{/unless}}
 </template>
 
 <template name="navbar">
     <div id='cssmenu' class="align-center">
         <ul>
-            <li class='active'><a href='#'>Rally Bíblico</a></li>
-            <li><a href='#'>Piloto</a></li>
+            <li class='active'><a href='/'>Rally Bíblico</a></li>
+            <li><a href='/dadospessoais'>Piloto</a></li>
             <li><a href='#'>Coordenador</a></li>
             <li><a href='#'>Administrador</a></li>
             {{#if currentUser}}

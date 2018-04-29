@@ -1,5 +1,8 @@
-/* CSS declarations go here */
 @import url(http://fonts.googleapis.com/css?family=Raleway);
+
+body {
+    font-family: Raleway, sans-serif;
+}
 #cssmenu,
 #cssmenu ul,
 #cssmenu ul li,

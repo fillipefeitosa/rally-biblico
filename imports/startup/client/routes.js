@@ -11,14 +11,13 @@ AccountsTemplates.configure({
     onLogoutHook: PostLogout
 });
 
-// Router.onBeforeAction(function(){
-//     if (! Meteor.userId()) {
-//         this.render('signin');
-//     } else {
-//         this.next();
-//     }
-// });
+Router.route('/', function(){
+    this.layout('main');
+    this.render('piloto');
+});
 
-Router.route('/', {
-    template: 'main'
+
+Router.route('/dadospessoais', function () {
+  this.layout('main');
+  this.render('dadospessoais');
 });

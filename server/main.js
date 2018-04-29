@@ -8,8 +8,8 @@ Meteor.startup(() => {
 
   ServiceConfiguration.configurations.insert({
     service: "facebook",
-    appId: '219411755279252',
-    secret: '576ee03a0bd34632f7fe11379e75bcc1'
+    appId: '836307303236785',
+    secret: '0aef8bd515a0e5ebb26546d01ae3bda8'
   });
   // code to run on server at startup
 

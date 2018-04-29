@@ -1,4 +1,240 @@
 <template name="piloto">
     <div class="container">
+        {{> rally}}
+    </div>
+</template>
+
+<template name="dadospessoais">
+    <div class="container">
+        <div class="row text-center">
+            <h1>Dados Pessoais</h1>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                {{#each data in userProfile}}
+                    {{data}}
+                {{/each}}
+            </div>
+            <div class="col-sm-4">
+                <div class="row"></div>
+                <form id="myform">
+                    <div class="form-group float-label-control">
+                        <label for="">Nome Completo</label>
+                        <input type="text" name="nomeCompleto">
+                    </div>
+                    <div class="form-group float-label-control">
+                        <label for="">Data de Nascimento</label>
+                        <input type="date" name="dataNascimento">
+                    </div>
+                    <div class="form-group float-label-control">
+                        <label for="">Cidade</label>
+                        <input type="text" name="cidade">
+                    </div>
+                    <div class="form-group float-label-control">
+                        <label for="">UF</label>
+                        <input type="text" name="uf">
+                    </div>
+                </form>
+            </div>
+            <div class="col-sm-4"></div>
+        </div>
+
+    </div>
+
+</template>
+
+<template name="rally">
+    <h3>Trilha</h3>
+    <div style="overflow-x: scroll">
+        <table class="table table-responsive rally-table">
+            <thead>
+                <tr>
+                    <td class="text-center"><b>Semanas</b></td>
+                    <td class="text-center"><b>Domingo</b></td>
+                    <td class="text-center"><b>Segunda</b></td>
+                    <td class="text-center"><b>Terça</b></td>
+                    <td class="text-center"><b>Quarta</b></td>
+                    <td class="text-center"><b>Quinta</b></td>
+                    <td class="text-center"><b>Sexta</b></td>
+                    <td class="text-center"><b>Sábado</b></td>
+                    <td class="text-center"><b>Capítulos</b></td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="text-center">
+                        <b>14</b>
+                    </td>
+                    <td class="text-center">
+                        <span class="date pull-left">01</span>
+                        <span class="verse">Is. 37 a 41</span>
+                    </td>
+                    <td class="text-center">
+                        <span class="date pull-left">02</span>
+                        <span class="verse">Is. 42 a 44</span>
+                    </td>
+                    <td class="text-center">
+                        <span class="date pull-left">03</span>
+                        <span class="verse">Is. 45 a 47</span>
+                    </td>
+                    <td class="text-center">
+                        <span class="date pull-left">04</span>
+                        <span class="verse">Is. 48 a 50</span>
+                    </td>
+                    <td class="text-center">
+                        <span class="date pull-left">05</span>
+                        <span class="verse">Is. 51 a 53</span>
+                    </td>
+                    <td class="text-center">
+                        <span class="date pull-left">06</span>
+                        <span class="verse">Is. 54 a 56</span>
+                    </td>
+                    <td class="text-center">
+                        <span class="date pull-left">07</span>
+                        <span class="verse">Is. 57 a 61</span>
+                    </td>
+                    <td class="text-center">
+                        <b>24</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center">
+                        <b>15</b>
+                    </td>
+                    <td class="text-center">
+                        <span class="date pull-left">08</span>
+                        <span class="verse">Is. 62 a 66</span>
+                    </td>
+                    <td class="text-center">
+                        <span class="date pull-left">09</span>
+                        <span class="verse">Sl. 17 a 19</span>
+                    </td>
+                    <td class="text-center">
+                        <span class="date pull-left">10</span>
+                        <span class="verse">Sl. 20 a 23</span>
+                    </td>
+                    <td class="text-center">
+                        <span class="date pull-left">11</span>
+                        <span class="verse">Sl. 24 a 28</span>
+                    </td>
+                    <td class="text-center">
+                        <span class="date pull-left">12</span>
+                        <span class="verse">Sl. 29 a 31</span>
+                    </td>
+                    <td class="text-center">
+                        <span class="date pull-left">13</span>
+                        <span class="verse">Gn. 1 a 3</span>
+                    </td>
+                    <td class="text-center">
+                        <span class="date pull-left">14</span>
+                        <span class="verse">Gn. 4 a 8</span>
+                    </td>
+                    <td class="text-center">
+                        <b>27</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center">
+                        <b>16</b>
+                    </td>
+                    <td class="text-center">
+                        <span class="date pull-left">15</span>
+                        <span class="verse">Gn. 9 a 13</span>
+                    </td>
+                    <td class="text-center">
+                        <span class="date pull-left">16</span>
+                        <span class="verse">Gn. 14 a 16</span>
+                    </td>
+                    <td class="text-center">
+                        <span class="date pull-left">17</span>
+                        <span class="verse">Gn. 17 a 19</span>
+                    </td>
+                    <td class="text-center">
+                        <span class="date pull-left">18</span>
+                        <span class="verse">Gn. 20 a 22</span>
+                    </td>
+                    <td class="text-center">
+                        <span class="date pull-left">19</span>
+                        <span class="verse">Gn. 23 a 25</span>
+                    </td>
+                    <td class="text-center">
+                        <span class="date pull-left">20</span>
+                        <span class="verse">Gn. 26 a 28</span>
+                    </td>
+                    <td class="text-center">
+                        <span class="date pull-left">21</span>
+                        <span class="verse">Gn. 29 a 33</span>
+                    </td>
+                    <td class="text-center">
+                        <b>24</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center">
+                        <b>17</b>
+                    </td>
+                    <td class="text-center">
+                        <span class="date pull-left">22</span>
+                        <span class="verse">Gn. 34 a 38</span>
+                    </td>
+                    <td class="text-center">
+                        <span class="date pull-left">23</span>
+                        <span class="verse">Gn. 39 a 41</span>
+                    </td>
+                    <td class="text-center">
+                        <span class="date pull-left">24</span>
+                        <span class="verse">Gn. 42 a 44</span>
+                    </td>
+                    <td class="text-center">
+                        <span class="date pull-left">25</span>
+                        <span class="verse">Gn. 45 a 47</span>
+                    </td>
+                    <td class="text-center">
+                        <span class="date pull-left">26</span>
+                        <span class="verse">Gn. 48 a 50</span>
+                    </td>
+                    <td class="text-center">
+                        <span class="date pull-left">27</span>
+                        <span class="verse">Sl. 32 a 35</span>
+                    </td>
+                    <td class="text-center">
+                        <span class="date pull-left">28</span>
+                        <span class="verse">Sl. 36 a 40</span>
+                    </td>
+                    <td class="text-center">
+                        <b>24</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center">
+                        <b>18</b>
+                    </td>
+                    <td class="text-center">
+                        <span class="date pull-left">29</span>
+                        <span class="verse">Sl. 41 a 45</span>
+                    </td>
+                    <td class="text-center">
+                        <span class="date pull-left">30</span>
+                        <span class="verse">Sl. 46 a 49</span>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="text-center">
+                        <b>8</b>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <p><b>Boa leitura da Palavra!</b></p>
+    </div>
+    <hr />
+    <div class="text-center">
+        <p class="published-date-label">Rally criado em</p>
+        <p class="published-date">2 de Abril de 2018 às 21:31</p>
     </div>
 </template>
