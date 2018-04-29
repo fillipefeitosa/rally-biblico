@@ -11,28 +11,25 @@
         </div>
         <div class="row">
             <div class="col-sm-4">
-                {{#each data in userProfile}}
-                    {{data}}
-                {{/each}}
             </div>
             <div class="col-sm-4">
                 <div class="row"></div>
                 <form id="myform">
                     <div class="form-group float-label-control">
                         <label for="">Nome Completo</label>
-                        <input type="text" name="nomeCompleto">
+                        <input type="text" name="nomeCompleto" value="{{userProfile.name}}">
                     </div>
                     <div class="form-group float-label-control">
                         <label for="">Data de Nascimento</label>
-                        <input type="date" name="dataNascimento">
+                        <input type="date" name="dataNascimento" value="{{userProfile.birthDate}}">
                     </div>
                     <div class="form-group float-label-control">
                         <label for="">Cidade</label>
-                        <input type="text" name="cidade">
+                        <input type="text" name="cidade" value="{{userProfile.city}}">
                     </div>
                     <div class="form-group float-label-control">
                         <label for="">UF</label>
-                        <input type="text" name="uf">
+                        <input type="text" name="uf" value="{{userProfile.uf}}">
                     </div>
                 </form>
             </div>
