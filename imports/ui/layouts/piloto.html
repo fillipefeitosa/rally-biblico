@@ -31,7 +31,15 @@
                         <label for="">UF</label>
                         <input type="text" name="uf" value="{{userProfile.uf}}">
                     </div>
-                </form>
+                    <div class="form-group float-label-control">
+                        <label for="">UF</label>
+                        <select>
+                            {{#each states}}
+                                <option> {{this.[0]}}</option> 
+                            {{/each}}
+                        </select>
+                    </div>
+                    </form>
             </div>
             <div class="col-sm-4"></div>
         </div>
