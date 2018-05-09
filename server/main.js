@@ -13,7 +13,7 @@ Meteor.startup(() => {
         Roles.createRole('Administrador');
     }
 
-
+    // facebook accounts configurations
     ServiceConfiguration.configurations.remove({
         service: "facebook"
     });
@@ -24,10 +24,9 @@ Meteor.startup(() => {
         secret: '0aef8bd515a0e5ebb26546d01ae3bda8'
     });
 
+    // On Create User Routine
     Accounts.onCreateUser(function (options, user) {
-        console.log(user._id);
-        Roles.addUsersToRoles(user._id, ['Convidado']);
-        console.log(user);
+        user.roles = ['Convidado'];
         if (!user.services.facebook) {
             return user;
         }
