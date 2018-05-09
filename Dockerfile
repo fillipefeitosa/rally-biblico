@@ -9,6 +9,9 @@ ARG APP_CHARSET=UTF-8
 ARG APP_USER=app
 ARG APP_USER_DIR=/home/${APP_USER}
 
+# run environment
+ENV APP_PORT=${APP_PORT:-3000}
+ENV APP_ROOT=${APP_ROOT:-/app}
 
 # exposed ports and volumes
 EXPOSE $APP_PORT
@@ -19,6 +22,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y dist-upgrade
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y curl python build-essential ${APP_PACKAGES}
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y debconf locales
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y git
 RUN DEBIAN_FRONTEND=noninteractive dpkg-reconfigure locales
 RUN DEBIAN_FRONTEND=noninteractive apt-get autoremove
 RUN DEBIAN_FRONTEND=noninteractive apt-get clean
@@ -34,9 +38,6 @@ USER ${APP_USER}
 # install Meteor
 RUN curl https://install.meteor.com/ | sh
 
-# run environment
-ENV APP_PORT=${APP_PORT:-3000}
-ENV APP_ROOT=${APP_ROOT:-/app}
 ENV MONGO_URL mongodb://rally:biblico@ds249128.mlab.com:49128/rallybiblico
 # ENV ROOT_URL https://rallybiblico.ngrok.io
 
