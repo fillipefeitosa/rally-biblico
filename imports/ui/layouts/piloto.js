@@ -43,10 +43,12 @@ Template.dadospessoais.helpers({
         return stateArray.sort();
     },
 
+    'dataCheck': function(a,b){
+        return a == b;
+    },
+
 
 });
-
-
 
 Template.dadospessoais.events({
     'keyup [name=nomeCompleto]': function(event){

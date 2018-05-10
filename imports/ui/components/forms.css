@@ -131,4 +131,28 @@ select {
     color: transparent;
     text-shadow: 0 0 0 #000;
   }
- 
+
+  span.notchecked {
+    width: 20px;
+    display: block;
+    color: rgba(243, 59, 59, 0.685);
+    font-weight: bold;
+    background-size: 20px 20px;
+    /* background-color: rgba(243, 59, 59, 0.685); */
+    text-align: center;
+    position: relative;
+    margin-top: 25px;
+  }
+
+  span.checked {
+    width: 20px;
+    display: block;
+    color: rgb(67, 201, 67);
+    font-weight: bold;
+    background-size: 20px 20px;
+    /* background-color: rgb(67, 201, 67); */
+    text-align: center;
+    position: relative;
+    margin-top: 25px;
+    border-radius: 10px;
+  }
