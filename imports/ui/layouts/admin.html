@@ -4,6 +4,7 @@
         <div class="row text-center">
             <h1>Grupos e Usuários</h1>
         </div>
+
         <div class="row">
             <div class="col-sm-1"></div>
             <div class="col-sm-10">
@@ -37,4 +38,19 @@
     {{else}}
         <h1>Não Autorizado</h1>
     {{/if}}
+</template>
+
+<template name="churches">
+    <div class="container">
+        <div class="row text-center">
+            <h1>Cadastrar Igreja</h1>
+        </div>
+        <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-10">
+                {{> quickForm collection=formCollection id="insertChurchForm" type="insert"}}
+            </div>
+            <div class="col-sm-1"></div>
+        </div>
+    </div>
 </template>

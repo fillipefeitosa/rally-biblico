@@ -28,3 +28,8 @@ Router.route("/admin/usergroups", function(){
     this.layout("main");
     this.render("usergroups");
 });
+
+Router.route("/admin/churches", function(){
+    this.layout("main");
+    this.render("churches");
+});

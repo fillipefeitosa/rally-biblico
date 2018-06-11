@@ -1,6 +1,8 @@
 import { Meteor } from 'meteor/meteor';
 import { Roles } from 'meteor/alanning:roles';
 
+import '../imports/api/churches/churches.js';
+
 Meteor.startup(() => {
     // Default Roles for Rally Bíblico
     var roles = Meteor.roles.find({}).count();
@@ -36,4 +38,15 @@ Meteor.startup(() => {
         return user;
     });
 
+});
+
+
+// Only Users and Groups Publications allowed here.
+// Import API Publications
+
+// Publish All Users to Admin User
+Meteor.publish("allUsers", function(){
+    if(Roles.userIsInRole(Meteor.userId(), 'Administrador')){
+        return Meteor.users.find({});
+    }
 });
