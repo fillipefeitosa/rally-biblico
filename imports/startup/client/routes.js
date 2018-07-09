@@ -24,6 +24,12 @@ Router.route('/dadospessoais', function () {
   this.render('dadospessoais');
 });
 
+
+Router.route("/admin", function(){
+    this.layout("main");
+    this.render("admin");
+});
+
 Router.route("/admin/usergroups", function(){
     this.layout("main");
     this.render("usergroups");

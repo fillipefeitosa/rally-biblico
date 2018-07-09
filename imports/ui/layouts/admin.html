@@ -1,3 +1,39 @@
+<template name="admin">
+    {{#if isInRole 'Administrador'}}
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-sm-4">
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="info-box">
+                            <span class="info-box-icon bg-aqua"><i class="ion ion-ios-gear-outline"></i></span>
+
+                            <div class="info-box-content">
+                                <span class="info-box-text">CPU Traffic</span>
+                                <span class="info-box-number">90<small>%</small></span>
+                            </div>
+                            <!-- /.info-box-content -->
+                        </div>
+                        <!-- /.info-box -->
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <a href="/admin/usergroups">
+                        <img src="smiley.gif" alt="HTML tutorial" style="width:42px;height:42px;border:0;">
+                    </a>
+                </div>
+
+                <div class="col-sm-4">
+                    <a href="/admin/churches">
+                        <img src="smiley.gif" alt="HTML tutorial" style="width:42px;height:42px;border:0;">
+                    </a>
+                </div>
+            </div>
+        </div>
+    {{else}}
+    <h1>Não Autorizado</h1>
+    {{/if}}
+</template>
 <template name="usergroups">
     {{#if isInRole 'Administrador'}}
     <div class="container">
@@ -42,6 +78,7 @@
 
 <template name="churches">
     <div class="container">
+        {{#if isInRole 'Administrador'}}
         <div class="row text-center">
             <h1>Cadastrar Igreja</h1>
         </div>
@@ -52,5 +89,8 @@
             </div>
             <div class="col-sm-1"></div>
         </div>
+        {{else}}
+            <h1>Não Autorizado</h1>
+        {{/if}}
     </div>
 </template>
