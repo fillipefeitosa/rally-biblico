@@ -1,6 +1,7 @@
 <template name="main">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>Rally Bíblico</title>
     </head>
     {{> navbar}}
@@ -18,7 +19,7 @@
             <li class='active'><a href='/'>Rally Bíblico</a></li>
             <li><a href='/dadospessoais'>Piloto</a></li>
             <li><a href='#'>Coordenador</a></li>
-            <li><a href='#'>Administrador</a></li>
+            <li><a href='/admin'>Administrador</a></li>
             {{#if currentUser}}
                 <li><a href="#" onclick=AccountsTemplates.logout()>Sair</a></li>
             {{/if}}
