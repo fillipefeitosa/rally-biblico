@@ -1,7 +1,7 @@
 import { Meteor } from 'meteor/meteor';
 import { Roles } from 'meteor/alanning:roles';
 
-import '../imports/api/churches/churches.js';
+import '../imports/startup/server';
 
 Meteor.startup(() => {
     // Default Roles for Rally Bíblico

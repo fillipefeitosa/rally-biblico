@@ -5,7 +5,6 @@ import { Churches } from '../../api/churches/churches.js';
 
 import './admin.html';
 
-
 Template.churches.helpers({
     formCollection() {
         return Churches;

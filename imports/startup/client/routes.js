@@ -1,7 +1,3 @@
-import '../../ui/layouts/main.js'
-import '../../ui/accounts/signin.js'
-import '../../ui/layouts/piloto.js'
-import '../../ui/layouts/admin.js'
 
 
 var PostLogout = function(){
@@ -23,7 +19,6 @@ Router.route('/dadospessoais', function () {
   this.layout('main');
   this.render('dadospessoais');
 });
-
 
 Router.route("/admin", function(){
     this.layout("main");

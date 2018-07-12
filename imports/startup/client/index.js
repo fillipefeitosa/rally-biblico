@@ -3,3 +3,9 @@ import './useraccounts-configuration.js';
 
 import '../../ui/components/forms.css';
 import '../../ui/components/forms.js';
+
+
+import '../../ui/layouts/main.js'
+import '../../ui/accounts/signin.js'
+import '../../ui/layouts/piloto.js'
+import '../../ui/layouts/admin.js'
