@@ -4,17 +4,7 @@ import { Roles } from 'meteor/alanning:roles';
 import '../imports/startup/server';
 
 Meteor.startup(() => {
-    // Default Roles for Rally Bíblico
-    var roles = Meteor.roles.find({}).count();
-    if (roles > 0) {
-        console.log("Roles Defined. Default Behavior.");
-    } else {
-        Roles.createRole('Convidado');
-        Roles.createRole('Piloto');
-        Roles.createRole('Coordenador');
-        Roles.createRole('Administrador');
-    }
-
+    
     // facebook accounts configurations
     ServiceConfiguration.configurations.remove({
         service: "facebook"

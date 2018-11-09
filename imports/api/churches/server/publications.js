@@ -1,4 +1,3 @@
-import { Template } from 'meteor/templating';
 import { Churches } from '../churches.js';
 
 // Publish all churches(complete) to the Admin

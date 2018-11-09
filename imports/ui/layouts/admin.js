@@ -17,7 +17,7 @@ Template.churches.helpers({
 Template.churches.onCreated(function(){
     this.autorun(() => {
         this.subscribe('Churches');
-        this.subscribe('bibleBooks');
+        this.subscribe('bible.books');
     });
 });
 

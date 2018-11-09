@@ -25,9 +25,14 @@ Meteor.startup(function(){
         console.log("Bible already defined. Default Behavior");
     } else {
         try {
-            request = HTTP.get("https://bibles.org/v2/versions/eng-GNTD/books.js?include_chapters=true", {auth:"zML67PplCmnER9a5yPyZeQO55qfraVrPo3K2VcAO:X"});
-            Bible.insert(request['data']['response']);
-            console.log("Bible Registered.");
+            request = HTTP.get("https://bibles.org/v2/versions/por-NTLH/books.js?include_chapters=true", {auth:"zML67PplCmnER9a5yPyZeQO55qfraVrPo3K2VcAO:X"});
+            books = request['data']['response']['books'];
+            for(const [key,value] of Object.entries(books)){
+                book = value;
+                Bible.insert(book);
+            }
+            // Bible.insert();
+            console.log("Bible Books in PT-BR Registered.");
         } catch (e) {
             console.log(e);
         }
