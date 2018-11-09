@@ -1,7 +1,9 @@
 import { Template } from 'meteor/templating';
 import { Moment } from 'meteor/momentjs:moment';
 
+// Importing APIs that are subscribed here
 import { Churches } from '../../api/churches/churches.js';
+import { Bible }    from '../../api/bible/bible.js';
 
 import './admin.html';
 
@@ -15,6 +17,7 @@ Template.churches.helpers({
 Template.churches.onCreated(function(){
     this.autorun(() => {
         this.subscribe('Churches');
+        this.subscribe('bibleBooks');
     });
 });
 
@@ -24,6 +27,11 @@ Template.usergroups.onCreated(function(){
         this.subscribe('allUsers');
     });
 });
+
+// Template.admin.onCreated(function(){
+//     this.autorun(() => {
+//     });
+// });
 
 Template.usergroups.helpers({
     users: function(){

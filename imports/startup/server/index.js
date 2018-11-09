@@ -1,2 +1,2 @@
-import './publish.js';
+import './register-api.js';
 import './fixtures.js';
