@@ -31,13 +31,14 @@ RallySchema = new SimpleSchema({
 
     regularity: {
         type: String,
-        label: "Regularidade",
-        allowedValues: ['anual', 'semestral', 'customizado'],
+        label: "Modalidade",
+        allowedValues: ['Bíblia - 1 ano', 'Novo Testamento - 6meses', 'Novo Testamento 5x5', 'Novos Convertidos'],
         autoform: {
             options: [
-                {label: "Anual", value: "anual"},
-                {label: "Semestral", value: "semestral"},
-                {label: "Customizado", value: "customizado"}
+                {label: "Bíblia em 1 ano", value: "Bíblia - 1 ano"},
+                {label: "Novo Testamento em 6 meses", value: "Novo Testamento - 6meses"},
+                {label: "Novo Testamento 5x5", value: "Novo Testamento 5x5"},
+                {label: "Novos Convertidos 30 dias", value: "Novos Convertidos"}
             ]
         }
     },

@@ -2,43 +2,53 @@
     {{#if isInRole 'Administrador'}}
     <div class="container">
         <div class="row text-center">
-            <h1>Painel de Rallys</h1>
+            <h1>Rally</h1>
+        </div>
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6">
+                {{>rallycreate}}
+            </div>
+            <div class="col-sm-3"></div>
         </div>
 
         <div class="row">
-            <div class="col-sm-1"></div>
-            <div class="col-sm-10">
-
-                <table class="table">
-                    <tr>
-                        <th>Rally</th>
-                        <th>Regularidade</th>
-                        <th>Início</th>
-                        <th>Término</th>
-                        <th>Pilotos</th>
-                        <th>Atualizar</th>
-                    </tr>
-                    {{#each rallys}}
-                    <tr>
-                        <td>{{rallyName}}</td>
-                        <td>{{regularity}}</td>
-                        <td>{{startDate}}</td>
-                        <td>{{finishDate}}</td>
-                        <td>2</td>
-                        <th><span class="glyphicon glyphicon-info-sign" href="/admin/rally/"></span></th>
-                    </tr>
-
-                    {{/each}}
-                </table>
-
-            </div>
-            <div class="col-sm-1"></div>
+            {{> rallylist}}
         </div>
 
     </div>
     {{else}}
     <h1>Não Autorizado</h1>
     {{/if}}
+
+</template>
+
+<template name="rallylist">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10">
+
+        <table class="table">
+            <tr>
+                <th>Rally</th>
+                <th>Modalidade</th>
+                <th>Início-Fim</th>
+                <th>Pilotos</th>
+                <th>Atualizar</th>
+            </tr>
+            {{#each rallys}}
+            <tr>
+                <td>{{rallyName}}</td>
+                <td>{{regularity}}</td>
+                <td>{{startDate}}</td>
+                <td>2</td>
+                <th><span class="glyphicon glyphicon-info-sign" href="/admin/rally/"></span></th>
+            </tr>
+
+            {{/each}}
+        </table>
+
+    </div>
+    <div class="col-sm-1"></div>
 
 </template>
 
@@ -59,17 +69,11 @@
 </template>
 
 <template name="rallycreate">
-    <div class="container">
-        <div class="row text-center">
-            <h1>Rally Bíblico</h1>
-        </div>
 
-        <div class="row">
-            <div class="col-sm-3"></div>
-            <div class="col-sm-6">
-                {{> quickForm collection=formCollection id="insertRallyForm" type="insert"}}
-            </div>
-            <div class="col-sm-3"></div>
+    <div class="panel panel-default">
+        <div class="panel-heading" data-toggle="collapse" data-target="#createRally"><i class="fas fa-plus"></i>  Criar Rally</div>
+        <div id="createRally" class="collapse">
+            {{> quickForm collection=formCollection id="insertRallyForm" type="insert"}}
         </div>
     </div>
 

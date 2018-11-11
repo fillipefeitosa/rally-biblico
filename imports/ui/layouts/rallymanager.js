@@ -21,7 +21,7 @@ Template.rallycreate.helpers({
 // Rally Update
 Template.rallyupdate.onCreated(function(){
     this.autorun(() => {
-        this.subscribe('Rally');
+        this.subscribe('rally.info');
     });
 });
 
@@ -32,13 +32,13 @@ Template.rallyupdate.helpers({
 });
 
 // Rally rallypannel
-Template.rallypannel.onCreated(function(){
+Template.rallylist.onCreated(function(){
     this.autorun(() => {
-        this.subscribe('Rally');
+        this.subscribe('rally.info');
     });
 });
 
-Template.rallypannel.helpers({
+Template.rallylist.helpers({
     rallys: function(){
         return Rally.find();
     },
