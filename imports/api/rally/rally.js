@@ -45,12 +45,7 @@ RallySchema = new SimpleSchema({
 
     startDate: {
         type: Date,
-        label: "Data de Início",
-    },
-
-    finishDate: {
-        type: Date,
-        label: "Data de Término",
+        label: "Largada",
     },
 
     regularityFlag: {
