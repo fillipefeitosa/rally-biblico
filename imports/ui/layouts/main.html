@@ -1,30 +1,7 @@
 <template name="main">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-        <title>Rally Bíblico</title>
-        <!-- Bible.org highlighter -->
-        <script id="bw-highlighter-config" data-version="NA17"></script>
-    </head>
-    {{> navbar}}
-
     {{#unless currentUser}}
         {{> signin}}
     {{else}}
-        {{> yield}}
+        {{> Template.dynamic template=pageContent}}
     {{/unless}}
-</template>
-
-<template name="navbar">
-    <div id='cssmenu' class="align-center">
-        <ul>
-            <li class='active'><a href='/'>Rally Bíblico</a></li>
-            <li><a href='/dadospessoais'>Piloto</a></li>
-            <li><a href='#'>Coordenador</a></li>
-            <li><a href='/admin'>Administrador</a></li>
-            {{#if currentUser}}
-            <li><a href="#" onclick=AccountsTemplates.logout()>Sair</a></li>
-            {{/if}}
-        </ul>
-    </div>
 </template>
