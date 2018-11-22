@@ -1,5 +1,5 @@
 import { Template } from 'meteor/templating';
-
+import { Session } from 'meteor/session';
 import './piloto.html';
 
 Template.dadospessoais.helpers({
@@ -30,14 +30,11 @@ Template.dadospessoais.events({
 
 
 // Rally events
-
 // highlighter routine
-Template.rally.onRendered(function(){
-    if(!this._rendered) {
-        this._rendered = true;
-        console.log('Template onLoad');
-    }
-    window.BIBLESEARCH.highlighterBooks['Ps'] = "sl,ps,psa,psalm,psalms";
-    console.log(window.BIBLESEARCH.highlighterBooks);
 
+Template.rally.onRendered(function(){
+    var highlighterScript = '//bibles.org/linker/js/client.js';
+    DocHead.loadScript(highlighterScript, function() {
+        window.BIBLESEARCH.highlighterBooks['Ps'] = "sl,ps,psa,psalm,psalms";
+    });
 });

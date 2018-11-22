@@ -1,6 +1,5 @@
 import './routes.js';
 import './useraccounts-configuration.js';
-import './highlighter.js';
 
 import '../../ui/components/forms.css';
 import '../../ui/components/forms.js';
