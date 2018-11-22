@@ -6,7 +6,46 @@ Template.dadospessoais.helpers({
     'userProfile': function(){
         const userProfile = Meteor.user().profile;
         return userProfile;
-    }
+    },    
+
+    states(){
+        stateArray = [
+            ["Rôndonia"],
+            ["Acre"],
+            ["Amazonas"],
+            ["Roraima"],
+            ["Pará"],
+            ["Amapá"],
+            ["Tocantins"],
+            ["Maranhão"],
+            ["Piauí"],
+            ["Ceará"],
+            ["Rio Grande do Norte"],
+            ["Paraíba"],
+            ["Pernambuco"],
+            ["Alagoas"],
+            ["Sergipe"],
+            ["Bahia"],
+            ["Minas Gerais"],
+            ["Espírito Santo"],
+            ["Rio de Janeiro"],
+            ["São Paulo"],
+            ["Paraná"],
+            ["Santa Catarina"],
+            ["Rio Grando do Sul"],
+            ["Mato Grosso do Sul"],
+            ["Mato Grosso"],
+            ["Goiás"],
+            ["Distrito Federal"],
+        ]
+        return stateArray.sort();
+    },
+
+    'dataCheck': function(a,b){
+        return a == b;
+    },
+
+
 });
 
 Template.dadospessoais.events({
@@ -16,7 +55,7 @@ Template.dadospessoais.events({
     },
     'change [name=dataNascimento]': function(event){
         const birthDate = $(event.target).val();
-        Meteor.users.update({_id: Meteor.userId()}, {$set: {"profile.birthDate": bithDate}});
+        Meteor.users.update({_id: Meteor.userId()}, {$set: {"profile.birthDate": birthDate}});
     },
     'keyup [name=cidade]': function(event){
         const city = $(event.target).val();
