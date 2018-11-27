@@ -8,7 +8,7 @@ exposed = FlowRouter.group({});
 exposed.route('/', {
     name: 'main',
     action: function(){
-        BlazeLayout.render('App_body', { navbar:"navbar", top: "header", main: "main", pageContent:"rally"});
+        BlazeLayout.render('App_body', {top: "header", main: "main", pageContent:"rally"});
     }
 });
 
@@ -35,6 +35,7 @@ loggedIn.route('/dadospessoais', {
     }
 });
 
+// Admin Routes
 var adminRoutes = FlowRouter.group({
     prefix: '/admin',
     name: 'admin',

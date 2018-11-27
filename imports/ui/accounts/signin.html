@@ -3,17 +3,85 @@
         Now you're logged in as <strong>{{currentUser.username}}</strong> using {{getEmail}}
         <p> Aqui o user: {{currentUser}} </p>
     {{else}}
-    <div class="container">    
-        <div class="row">
-            <div class="col-md-4">
-            </div>
-            <div class="col-md-4">
-                {{> atForm}}
-            </div>
-            <div class="col-md-4">
+    <header class="intro-header" style="background-image: url('images/bg-bible.jpg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-lg-offset-1 col-md-6 col-md-offset-1">
+                    <div class="site-heading">
+                        <h1>Rally Bíblico</h1>
+                        <hr class="small">
+                        <span class="subheading">Que tal parar um pouco a rotina para ler a palavra de Deus?</span>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 ">
+                    <div class="limiter">
+                		<div class="container-login100">
+                			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
+                				<form class="login100-form validate-form">
+                					<span class="login100-form-title p-b-49">
+                						Login
+                					</span>
+
+                					<div class="wrap-input100 validate-input m-b-23" data-validate = "Username is reauired">
+                						<span class="label-input100">E-mail</span>
+                						<input class="input100" type="text" name="username" placeholder="Coloque seu e-mail">
+                						<span class="focus-input100" data-symbol="&#xf206;"></span>
+                					</div>
+
+                					<div class="wrap-input100 validate-input" data-validate="Password is required">
+                						<span class="label-input100">Senha</span>
+                						<input class="input100" type="password" name="pass" placeholder="Coloque sua senha">
+                						<span class="focus-input100" data-symbol="&#xf190;"></span>
+                					</div>
+
+                					<div class="text-right p-t-8 p-b-31">
+                						<a href="#">
+                							Esqueceu a senha?
+                						</a>
+                					</div>
+
+                					<div class="container-login100-form-btn">
+                							<button class="btn btn-info">
+                								Entrar
+                							</button>
+                					</div>
+                                    <hr class="small"/>
+                					<div class="txt1 text-center p-t-54 p-b-20">
+                						<span>
+                							Ou entre usando
+                						</span>
+                					</div>
+
+                					<div class="flex-c-m">
+                						<a href="#" class="login100-social-item bg1">
+                							<i class="fab fa-facebook-f"></i>
+                						</a>
+                						<a href="#" class="login100-social-item bg3">
+                							<i class="fab fa-google-plus-g"></i>
+                						</a>
+                					</div>
+
+                                    <hr class="small"/>
+                					<div class="flex-col-c p-t-155">
+                						<span class="txt1 p-b-17">
+                							Ou crie uma conta
+                						</span>
+
+                						<a href="#" class="txt2">
+                							Registrar
+                						</a>
+                					</div>
+                				</form>
+                			</div>
+                		</div>
+                	</div>
+                    <!-- {{> atForm}} -->
+                </div>
             </div>
         </div>
-    </div>
+    </header>
+
+
     {{/if}}
 
 </template>
