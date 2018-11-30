@@ -66,8 +66,15 @@ RallySchema = new SimpleSchema({
     "regularityFlag.$.date": {
         type: Date,
         label: "Data"
-    }
-
+    },
+    tracks: {
+        type: Array,
+        optional: true,
+        label: "Trilhas",
+    },
+    'tracks.$': Object,
+    'tracks.$.month': String,
+    'tracks.$.references': String
 });
 
 Rally.attachSchema(RallySchema);

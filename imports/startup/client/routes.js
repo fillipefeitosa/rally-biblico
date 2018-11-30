@@ -12,6 +12,12 @@ exposed.route('/', {
     }
 });
 
+exposed.route('/signup', {
+    name: 'signup',
+    action: function(){
+        BlazeLayout.render('App_body', {top: "header", main: "signup"});
+    }
+})
 // Logged Routes
 loggedIn = FlowRouter.group({
     triggersEnter: [

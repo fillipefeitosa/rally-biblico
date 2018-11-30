@@ -73,7 +73,7 @@
     <div class="panel panel-default">
         <div class="panel-heading" data-toggle="collapse" data-target="#createRally"><i class="fas fa-plus"></i>  Criar Rally</div>
         <div id="createRally" class="collapse">
-            {{> quickForm collection=formCollection id="insertRallyForm" type="insert"}}
+            {{> quickForm collection=formCollection id="insertRallyForm" type="insert" omitFields="tracks"}}
         </div>
     </div>
 

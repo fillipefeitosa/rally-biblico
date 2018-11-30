@@ -12,5 +12,14 @@ Template.signin.events({
                 console.log('Handle errors here: ', err);
             }
         });
+    },
+    'submit form': function(event){
+        event.preventDefault();
+        var emailVar = event.target.useremail.value;
+        var passVar = event.target.userpass.value;
+        Meteor.loginWithPassword(emailVar, passVar);
+    },
+    'registerNewAccount': function(event){
+
     }
 });

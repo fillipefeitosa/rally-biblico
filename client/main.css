@@ -3,6 +3,9 @@
 body {
     font-family: Raleway, sans-serif;
 }
+.registerNewAccount{
+    visibility: hidden;
+ }
 /** top tiles  */
 .tile_count {
     margin-bottom: 20px;
