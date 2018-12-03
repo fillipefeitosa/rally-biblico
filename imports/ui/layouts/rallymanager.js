@@ -58,13 +58,12 @@ Template.rallylist.helpers({
 // Rally OnInsert Hook
 // Used to create tracks on rally
 Rally.after.insert(function (userId, doc) {
-    var trackObj = {
-        month: "janeiro",
-        month: "fevereiro",
-        month: "março"
-    }
-    // console.log(trackObj);
+    var trackObj = [
+        {month: "janeiro", references: "Gen 18"},
+        {month: "fevereiro", references: "Gen 18"},
+    ];
+    console.log(trackObj);
     Rally.update(this._id, {$set:{
-        tracks : trackObj
+        tracks :trackObj
     }});
 });

@@ -73,8 +73,14 @@ RallySchema = new SimpleSchema({
         label: "Trilhas",
     },
     'tracks.$': Object,
-    'tracks.$.month': String,
-    'tracks.$.references': String
+    'tracks.$.month': {
+        type: String,
+        optional: true
+    },
+    'tracks.$.references': {
+        type: String,
+        optional: true
+    }
 });
 
 Rally.attachSchema(RallySchema);
